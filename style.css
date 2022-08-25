@@ -1,0 +1,232 @@
+@font-face {
+    font-family: roboto;
+    src: url(../scripts/Roboto.zip);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+body{
+    font-family: sans-serif;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4 auto);
+    grid-template-areas:"header header"
+                        "main main"
+                        "main main"
+                        "foot foot";}
+
+header {
+    grid-area: header;
+    background-image: linear-gradient(90deg, rgba(0,6,120,1) 0%, rgba(6,122,244,1) 50%, rgba(0,212,255,1) 100%);
+    opacity: 0.9;
+    display: block;
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    top: 0%;
+    z-index: 100;
+    text-align: center;}
+
+nav {
+    grid-area: nav;
+    font-size: large;
+    display: flex;
+    justify-content: center;}
+#logoyNombre{
+    display: inline-block;
+    height: 5vh;}
+nav ul li {
+    display: inline;}
+nav ul li a:link, a:visited, a:active {
+    list-style: none;
+    text-decoration: none;
+    color: rgb(255, 255, 255);}
+.menuNav{
+    transition: 0.2s linear;}
+.menuNav:hover{
+    transform: scale(1.03);}
+
+main{
+    margin-top: 15vh;
+    display: grid;
+    grid-area: main;
+    grid-template-rows: repeat(3 auto);
+    grid-template-columns: 50% 50%;
+    grid-template-areas:"seccion1 seccion1bis"
+                        "seccion2 seccion2"
+                        "seccion3 seccion4";}
+    
+.seccion1{grid-area: seccion1;
+height: 85vh;}
+.seccion1bis{grid-area: seccion1bis;}
+#cargaCon{
+    height: 100%;
+    width: 100%}
+#videoComoCargar{
+    height: 100%;
+    width: 100%;}
+
+    #bodyProductos{
+    display: grid;
+    grid-template-columns:100%;
+    grid-template-rows: repeat(4 auto);}
+#mainProductos{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4 auto);
+    grid-template-areas:"seccion1"
+                        "seccion2"
+                        "seccion3"
+                        "seccion4";}
+#productosAceites{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20vh 20vh 20vh;
+    grid-template-areas:"backProduct backProduct"
+                        "a2040 a2050"
+                        "hd500 hd1lt";}
+
+
+.backProduct{
+    grid-area: backProduct;
+    width: 100%;
+    height: 100%;}
+
+.icoAceite{
+    width: 80px;
+    height: 80px;}
+
+
+#a2040{grid-area:a2040;}
+#a2050{grid-area:a2050;
+justify-self: end;}
+#aHd500{grid-area: hd500;}
+#aHd1lt{grid-area: hd1lt;
+justify-self: end;}
+
+#refriBack{
+    width: 100%;
+}
+
+.seccion2{
+    grid-area: seccion2;
+    width: 100%;
+}
+
+.imageBack1{
+    height: 100%;
+    width: 100%;
+ }
+
+
+.seccion3{
+    grid-area: seccion3;
+}
+
+.seccion4{
+    grid-area: seccion4;
+}
+
+#formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+#map{
+    position: absolute;
+    position: fixed;
+    width: 20vw;
+    height: 30vh;
+    bottom: 10px;
+    right: 10px;
+    margin-bottom: 3vh;
+}
+
+footer{
+    grid-area: foot;
+    background-image: linear-gradient(90deg, rgba(140,140,140,1) 0%, rgba(93,93,93,1) 50%, rgba(47,47,47,1) 100%);
+}
+
+@media screen and (max-width: 1048px) {
+    body{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:"nav nav"
+                            "main main"
+                            "main main"
+                            "main main"
+                            "foot foot";
+    }
+
+    main{
+        width: 100%;
+        grid-template-rows: repeat(4 auto);
+        grid-template-columns: repeat(2 auto);
+        grid-template-areas:"seccion1 seccion1"
+                            "seccion1bis seccion1bis"
+                            "seccion2 seccion2"
+                            "seccion3 seccion4";
+    }
+
+    #cargaCon{
+        height: 50vh;
+        width: 100%;
+    }
+    #videoComoCargar{
+    height: 50vh;
+    width: 100%;
+    }
+    #bodyProductos{
+    grid-template-rows: repeat(7 auto);}
+
+    #productosAceites{
+        grid-template-columns: 100%;
+        grid-template-rows: 25% 25% 25% 25%;
+        grid-template-areas:"a2040"
+                            "a2050"
+                            "hd500"
+                            "hd1lt";}
+
+    #a2040{justify-self: start;}
+    #a2050{justify-self: start;}
+    #aHd500{justify-self: start;}
+    #aHd1lt{justify-self: start;}
+
+
+    #map{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 520px) {
+
+    body{
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:"nav"
+                            "main"
+                            "main"
+                            "foot";
+    }
+
+    main{
+        grid-template-rows: repeat(5 auto);
+        grid-template-columns: 100%;
+        grid-template-areas:"seccion1"
+                            "seccion1bis"
+                            "seccion2"
+                            "seccion3"
+                            "seccion4";
+    }
+    
+    #map{
+        display: none;
+    }
+}
