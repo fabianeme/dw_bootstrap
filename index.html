@@ -4,56 +4,124 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     
 </head>
 <body>
-    <header class="container-fluid">
-        <div class="row bg-primary d-flex justify-content-center align-items-center" id="header">
-            <div class="col"></div>
-            <div class="col"><a class="bg-light" href="./pages/nosotros.html">Nosotros</a></div>
-            <div class="col"><a class="bg-light" href="./pages/vos.html">Vos</a></div>
-            <div class="col"><a class="bg-light" href="./pages/productos.html">Producto</a></div>
-            <div class="col "><a class="bg-light" href="./pages/contacto.html">Contacto</a></div>
-        </div>
-         
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
+            <div class="container-fluid" data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="750">
+              <a class="navbar-brand" href="./index.html">
+                <img id="logo" src="./images/logoGNC.png" alt=""></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./pages/productos.html">PRODUCTOS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="">VOS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="">NOSOTROS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="">CONTACTO</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
     
     <main class="container-fluid">
-        <div class="row" id="main">
-            <div class="row">
-                <div class="col">
-                    <img src="./images/auto_cargando_gnc.jpg" class="img-fluid" alt="foto de gente en la estacio"></div>
-                <div class="col">
-                    <iframe src="https://www.youtube.com/embed/qUxC8x_uLxg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="inframe-fluid"></iframe></div>
-            </div>
-            
-            <div class="row justify-content-center align-items-center">
-                <div class="col">
-                    <img src="./images/fondoRamos.png" class="img-fluid" alt="">
-                </div>
-                
-                <div class="col">
-                    <div class="row">
-                        <div class="col"><button>1</button></div>
-                        <div class="col"><button>2</button></div>
+        <div class="row" >
+            <div class="col" >
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
-                    <div class="row">
-                        <div class="col"><button>3</button></div>
-                        <div class="col"><button>4</button></div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="./images/auto_cargando_gnc.png" class="d-block w-100 height:auto" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>First slide label</h5>
+                          <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/auto_cargando_aceite.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Second slide label</h5>
+                          <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/fondoRamos.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Third slide label</h5>
+                          <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                      </div>
                     </div>
-                </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>Inicia tu dia con nosotros</h2>
+            </div>
+            <div class="col">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore obcaecati illo qui alias ex recusandae assumenda officia quis aspernatur laboriosam velit ea sed voluptas, corporis, illum facere consectetur quasi itaque.
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                <img src="./images/estacion-atardecer.png" class="img-fluid" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, architecto! Aliquam rem magnam dolorum, fugiat pariatur ea quaerat. Laborum eos nam beatae ex! Vero, exercitationem neque doloremque quod veritatis aliquam!
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"><img src="" alt="icono">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, doloremque fugiat soluta autem aliquid maxime adipisci consectetur unde sequi eligendi fugit molestias libero eaque, cupiditate deserunt consequuntur incidunt, facilis assumenda.</div>
+            <div class="col"><img src="" alt="icono">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus praesentium quam eius cumque eum quis, neque suscipit natus non cum, voluptatum molestiae corrupti provident est laboriosam qui necessitatibus dolore.</div>
+            <div class="col"><img src="" alt="icono">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis laborum voluptate ad doloribus laudantium debitis ipsum praesentium unde incidunt odit velit necessitatibus deserunt earum, deleniti autem neque repellat veniam. Voluptatum!</div>
+            <div class="col"><img src="" alt="icono">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis est neque minus modi illo eaque sint, aliquam nemo ab tenetur quod sit, dolorum iure totam consectetur id. Modi, dicta perspiciatis.</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur culpa nemo ipsa dolor corrupti aliquid quam numquam temporibus fugiat. Nam distinctio officia quia repudiandae quasi? Iste recusandae aut magni. Illo!</p>
         </div>
 
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+   
     <footer class="container-fluid" >
         <div class="row bg-secondary" id="footer">
             <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis consequatur ipsam distinctio labore, nisi est quidem voluptatibus sequi placeat, repellat, saepe debitis ratione nihil aut fugit laudantium. Facilis incidunt sed modi laborum veniam laudantium accusamus, quia alias ad sit sapiente quo hic iste neque non aliquid assumenda quasi dolorum debitis rerum possimus quas, quibusdam provident tempore. Aliquam minus fugit quod repudiandae culpa veniam inventore, illum explicabo quaerat vero incidunt molestiae repellat facilis sint ea id, excepturi laudantium molestias enim provident optio eius sit. Voluptatem alias molestiae quae hic. Enim praesentium provident quia hic similique. Temporibus, vero veniam? Provident, enim quis?</div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 </body>
 </html>

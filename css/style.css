@@ -1,9 +1,20 @@
-
-#header{
-    height: 10vh;
+@font-face {
+    font-family:roboto ;
+    src: url(../scripts/Roboto.zip);
+}
+body{
+    font-family: roboto;
 }
 
-#footer{
-    height: 10vh;
+#main{
+
 }
 
+nav{background-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+}
+nav{
+    color: white;
+}
+.nav-link{
+    color: rgb(255, 255, 255);
+}
