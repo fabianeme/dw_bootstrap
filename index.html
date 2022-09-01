@@ -8,41 +8,49 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <title>GNC</title>
-    
 </head>
 <body>
-    <header class="fixed-top">
-        <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
-            <div class="container-fluid" data-aos="fade-down"
-            data-aos-easing="linear"
-            data-aos-duration="300">
-              <a class="navbar-brand" href="./index.html">
-                <img id="logo" src="./images/logoGNC.png" alt=""></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="./images/iconohamburgesa.png" class="img-fluid" alt="">
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./pages/productos.html">PRODUCTOS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./pages/vos.html">VOS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./pages/nosotros.html">NOSOTROS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./pages/contacto.html">CONTACTO</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+    <header class="container-fluid fixed-top">
+      <div class="row">
+        <div class="col">
+            <a href="./index.html">
+                <img  src="./images/logoGNC.png" class="img-fluid" alt="">
+            </a>
+        </div>
+        <div class="col">
+          <div class="container-fluid">
+           <nav class="navbar navbar-expand-lg bg-transparent">
+               <div class="container-fluid" data-aos="fade-down"
+               data-aos-easing="linear"
+               data-aos-duration="300">
+                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                   <img src="./images/iconohamburgesa.png" class="img-fluid" alt="" >
+                 </button>
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   <ul class="navbar-nav">
+                     <li class="nav-item">
+                       <a class="nav-link" aria-current="page" href="./pages/productos.html">PRODUCTOS</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link" href="./pages/vos.html">VOS</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link" href="./pages/nosotros.html">NOSOTROS</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link" href="./pages/contacto.html">CONTACTO</a>
+                     </li>
+                   </ul>
+                 </div>
+               </div>
+             </nav>
+          </div>
+       </div>
+    </div>
     </header>
     
     <main class="container-fluid">
-        <div class="row">
+        <div class="row" id="main">
             <div class="col" >
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
                     <div class="carousel-indicators">

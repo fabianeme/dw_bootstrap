@@ -3,7 +3,9 @@
     src: url(../scripts/Roboto.zip);
 }
 body{
-    font-family: roboto;}
+    font-family: roboto;
+}
+@import "./variables";
 @import "./header";
 @import "./main";
 @import "./footer";
