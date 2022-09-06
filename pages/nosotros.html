@@ -10,35 +10,44 @@
     <title>GNC - PRODUCTOS</title>
 </head>
 <body>
-    <header class="fixed-top" data-aos="fade-down"
+  <header class="container-fluid fixed-top" id="nav" >
+    <div class="row"  data-aos="fade-down"
     data-aos-easing="linear"
     data-aos-duration="300">
-      <a class="navbar-brand" href="../index.html">
-        <img id="logo" src="../images/logoGNC.png" alt=""></a>
-        <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
-            <div class="container-fluid" > 
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="../images/iconohamburgesa.png" class="img-fluid" alt="">
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="../pages/productos.html">PRODUCTOS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="../pages/vos.html">VOS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="../pages/contacto.html">CONTACTO</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-    </header>
+      <div class="col-4">
+          <a href="../index.html">
+              <img  src="../images/logoGNC.png" class="img-fluid" alt="">
+          </a>
+      </div>
+      <div class="col-4">
+        <div class="container-fluid">
+         <nav class="navbar navbar-expand-lg" >
+             <div class="container-fluid">
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                 <img src="../images/iconohamburgesa.png" class="img-fluid" alt="icono menu hamburguesa" >
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <ul class="navbar-nav">
+                   <li class="nav-item">
+                     <a class="nav-link" aria-current="page" href="../pages/productos.html">PRODUCTOS</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" href="../pages/vos.html">VOS</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" href="../pages/contacto.html">CONTACTO</a>
+                   </li>
+                 </ul>
+               </div>
+             </div>
+           </nav>
+        </div>
+     </div>
+  </div>
+  </header>
     <main class="container-fluid">
       <div class="row">
           <div class="row">
@@ -47,11 +56,11 @@
             </div>
           </div>
           <div class="row">
-            <div class="col">
+            <div class="col-lg-6 col-md-12">
               <h3>QUIENES SOMOS?</h3>
               <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora iure aspernatur iste aliquam distinctio quaerat harum hic eius veritatis perferendis incidunt sequi molestias voluptatum illum, </P>
             </div>
-            <div class="col">
+            <div class="col-lg-6 col-md-12">
               <img src="../images/estacionNos.png" class="img-fluid" alt="">
             </div>
           </div>
@@ -97,6 +106,12 @@
             <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis consequatur ipsam distinctio labore, nisi est quidem voluptatibus sequi placeat, repellat, saepe debitis ratione nihil aut fugit laudantium. Facilis incidunt sed modi laborum veniam laudantium accusamus, quia alias ad sit sapiente quo hic iste neque non aliquid assumenda quasi dolorum debitis rerum possimus quas, quibusdam provident tempore. Aliquam minus fugit quod repudiandae culpa veniam inventore, illum explicabo quaerat vero incidunt molestiae repellat facilis sint ea id, excepturi laudantium molestias enim provident optio eius sit. Voluptatem alias molestiae quae hic. Enim praesentium provident quia hic similique. Temporibus, vero veniam? Provident, enim quis?</div>
         </div>
     </footer>
+    <script type="text/javascript">
+      window.addEventListener("scroll", function(){
+        var header = document.querySelector("#nav");
+        header.classList.toggle("navScroll",window.scrollY>0);
+      })
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
