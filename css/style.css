@@ -27,3 +27,16 @@ header {
 
 .navbar-toggler {
   justify-content: end; }
+
+.seccion2 {
+  background-color: #F2F2F2; }
+
+.seccion3 {
+  background-color: #EAEAEA; }
+
+footer {
+  color: #f1f1f1;
+  background-color: #1C1C1C; }
+  footer hr {
+    height: 10px;
+    background-image: linear-gradient(283deg, #00f1ff 0%, #004eff 100%); }
