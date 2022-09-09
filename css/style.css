@@ -5,11 +5,8 @@
 body {
   font-family: roboto; }
 
-header {
-  background-image: linear-gradient(180deg, black 0%, rgba(255, 255, 255, 0) 100%);
-  transition: all 1.5s ease; }
-  header nav ul {
-    align-items: end; }
+header nav ul {
+  align-items: end; }
 
 .navScroll {
   background-color: rgba(0, 0, 0, 0.863); }
@@ -28,11 +25,15 @@ header {
 .navbar-toggler {
   justify-content: end; }
 
+.gradienteHead, header {
+  background-image: linear-gradient(180deg, black 0%, rgba(255, 255, 255, 0) 100%);
+  transition: all 1.5s ease; }
+
 .seccion2 {
   background-color: #F2F2F2; }
 
 .seccion3 {
-  background-color: #EAEAEA; }
+  background-color: #d4d4d4; }
 
 footer {
   color: #f1f1f1;

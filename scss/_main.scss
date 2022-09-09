@@ -1,7 +1,7 @@
 .seccion2{
-    background-color: $bgcasiblanco;
+    background-color: map-get($colores , "casiBlanco");
 }
 
 .seccion3{
-    background-color: $bgmasoscuro;
+    background-color: map-get($colores, "pocoBlanco");
 }
