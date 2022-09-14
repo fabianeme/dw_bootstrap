@@ -1,7 +1,33 @@
-.seccion2{
-    background-color: map-get($colores , "casiBlanco");
-}
 
+.btn-link{
+    color: map-get($colores , "casiBlanco" );
+    transition: 0.5s;
+}
+.btn-link:hover{
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+.seccion{
+    background-color: map-get($colores , "casiBlanco");
+    align-items: center;
+    justify-content: center;
+    
+}
+.seccion1{
+@extend .seccion;
+    background-color:black;
+    color: #F5F5F7;
+    text-align: end;
+}
+.seccion2{
+@extend .seccion;
+color:black ;
+text-align: start;
+}
 .seccion3{
-    background-color: map-get($colores, "pocoBlanco");
+ @extend .seccion;
+ font-style: italic;
+}
+.vr{
+    width: 1px;
 }
