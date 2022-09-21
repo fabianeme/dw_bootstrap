@@ -1,4 +1,13 @@
-header{@extend .gradienteHead;}
+header{@extend .gradienteHead;
+    nav{text-align: end;
+    } 
+}
+
+.navbar>.container-fluid{
+    justify-content: end;
+    padding-right: 10px;
+}
+
 .navScroll{
     background-color: rgba(0, 0, 0, 0.863);
 }

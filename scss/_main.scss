@@ -1,33 +1,40 @@
-
+main{
+    div.seccion2{
+        
+    }
+}
 .btn-link{
     color: map-get($colores , "casiBlanco" );
     transition: 0.5s;
 }
 .btn-link:hover{
     color: rgb(255, 255, 255);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .seccion{
-    background-color: map-get($colores , "casiBlanco");
     align-items: center;
     justify-content: center;
-    
+    padding-top: 50px;
 }
 .seccion1{
 @extend .seccion;
     background-color:black;
     color: #F5F5F7;
-    text-align: end;
+    text-align: start;
+    
 }
 .seccion2{
-@extend .seccion;
-color:black ;
-text-align: start;
+    @extend .seccion;
+    color:map-get($colores ,"negrotx");
+    text-align: end;
 }
+
 .seccion3{
+    @extend .seccion;
+    color:map-get($colores ,"negrotx");
+}
+
+.seccion4{
  @extend .seccion;
  font-style: italic;
-}
-.vr{
-    width: 1px;
 }

@@ -5,6 +5,13 @@
 body {
   font-family: roboto; }
 
+header nav {
+  text-align: end; }
+
+.navbar > .container-fluid {
+  justify-content: end;
+  padding-right: 10px; }
+
 .navScroll {
   background-color: rgba(0, 0, 0, 0.863); }
 
@@ -26,28 +33,34 @@ body {
 
 .btn-link:hover {
   color: white;
-  transform: scale(1.1); }
+  transform: scale(1.05); }
 
-.seccion, .seccion1, .seccion2, .seccion3 {
-  background-color: #F2F2F2;
+.seccion, .seccion1, .seccion2, .seccion3, .seccion4 {
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  padding-top: 50px; }
 
 .seccion1 {
   background-color: black;
   color: #F5F5F7;
-  text-align: end; }
-
-.seccion2 {
-  color: black;
   text-align: start; }
 
-.seccion3 {
-  font-style: italic; }
+.seccion2 {
+  color: #222222;
+  text-align: end; }
 
-.vr {
-  width: 1px; }
+.seccion3 {
+  color: #222222; }
+
+.seccion4 {
+  font-style: italic; }
 
 footer {
   color: #f1f1f1;
   background: #1C1C1C; }
+
+.icoredes {
+  max-width: 60px; }
+
+.logofooter {
+  padding-bottom: 50px; }
