@@ -1,13 +1,12 @@
-@import "./mixins";
 @font-face {
-    @include RobFont;
-    }
+    font-family: SF;
+    src: url(../scripts/SF-Pro-Display-Medium.otf);
+}
 body{
-        font-family: roboto;
-    }
-    
+    font-family: SF;
+}
+@import "./mixins";    
 @import "./variables";
 @import "./header";
 @import "./main";
 @import "./footer";
-

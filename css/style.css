@@ -1,47 +1,116 @@
 @font-face {
-  font-family: roboto;
-  src: url(../scripts/Roboto.zip); }
+  font-family: SF;
+  src: url(../scripts/SF-Pro-Display-Medium.otf); }
 
 body {
-  font-family: roboto; }
+  font-family: SF; }
 
-header nav {
-  text-align: end; }
+.bg-transparente {
+  background-image: linear-gradient(0deg, rgba(232, 232, 232, 0) 0%, #111111 100%);
+  transition: all 0.5s ease; }
 
-.navbar > .container-fluid {
-  justify-content: end;
-  padding-right: 10px; }
-
-.navScroll {
-  background-color: rgba(0, 0, 0, 0.863); }
+.bgscroll {
+  background-color: #111111e0; }
 
 .nav-link {
   color: #e6e6e6;
-  transition: 0.5s; }
+  transition: 0.8s; }
+
+.hrblanco {
+  border-color: white; }
+
+.navbar-collapse {
+  text-align: center; }
+
+.navbar-nav {
+  justify-content: space-around; }
 
 .nav-link:hover {
   color: white;
-  transform: scale(1.1); }
+  transform: scale(1); }
 
-.gradienteHead, header {
+.gradienteHead {
   background-image: linear-gradient(180deg, black 0%, rgba(255, 255, 255, 0) 100%);
   transition: all 1.5s ease; }
 
+main {
+  background-color: #ececec; }
+
 .btn-link {
-  color: #F2F2F2;
+  color: #ececec;
   transition: 0.5s; }
 
 .btn-link:hover {
   color: white;
   transform: scale(1.05); }
 
-.seccion, .seccion1, .seccion2, .seccion3, .seccion4 {
+.producto {
+  transition: 0.3s;
+  max-width: 480px; }
+
+.producto:hover {
+  transform: scale(1.005);
+  box-shadow: 1px 1px 1px 1px #979797; }
+
+.imgprod {
+  max-height: 250px; }
+
+.icomp {
+  height: 80px; }
+
+.txgradred {
+  background: linear-gradient(87deg, #df2d2d 0%, white 34%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; }
+
+.txred {
+  background: linear-gradient(87deg, #f2f2f2 43%, #df2d2d 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; }
+
+.txgradblue {
+  background: linear-gradient(87deg, #158fec 58%, #da8920 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; }
+
+.txgradbluelight {
+  background: linear-gradient(87deg, #171717 14%, #003f77 43%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; }
+
+.txgradyel {
+  background: linear-gradient(87deg, #171717 38%, #774200 64%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; }
+
+.txgradyelwt {
+  background: linear-gradient(87deg, #e8e8e8 0%, #774200 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; }
+
+.txgradgreen {
+  background: linear-gradient(87deg, #f2f2f2 61%, #04675d 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; }
+
+.btn-dark {
+  background-image: linear-gradient(87deg, #012f2b 0%, #05786c 100%); }
+
+.padding {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+
+.bgdark {
+  background-color: #111111; }
+
+.seccion, .seccion1, .seccion2, .seccion3, .seccion4, .seccion5 {
   align-items: center;
   justify-content: center;
-  padding-top: 50px; }
+  padding-top: 40px;
+  padding-bottom: 40px; }
 
 .seccion1 {
-  background-color: black;
+  background-color: #111111;
   color: #F5F5F7;
   text-align: start; }
 
@@ -50,17 +119,71 @@ header nav {
   text-align: end; }
 
 .seccion3 {
-  color: #222222; }
+  color: #222222;
+  text-align: start;
+  padding-top: 120px;
+  padding-bottom: 120px; }
 
 .seccion4 {
+  background-color: #050404;
+  color: #ececec; }
+
+.seccion5 {
   font-style: italic; }
 
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100; }
+
+.float:hover {
+  text-decoration: none;
+  color: #25d366;
+  background-color: #fff; }
+
+.my-float {
+  margin-top: 16px; }
+
 footer {
-  color: #f1f1f1;
-  background: #1C1C1C; }
+  background: #111111; }
+
+.p30x30 {
+  padding-top: 30px;
+  padding-bottom: 30px; }
 
 .icoredes {
-  max-width: 60px; }
+  color: #f1f1f1;
+  text-decoration: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #d4d4d4; }
+
+.icoredes:hover {
+  color: white; }
 
 .logofooter {
   padding-bottom: 50px; }
+
+.f1 {
+  padding-top: 10px;
+  font-size: smaller;
+  color: #d4d4d4; }
+
+.f2 {
+  background: #080808;
+  color: #d4d4d4;
+  font-size: smaller; }
+
+.vr {
+  min-height: 15px;
+  width: 2px;
+  color: white; }
