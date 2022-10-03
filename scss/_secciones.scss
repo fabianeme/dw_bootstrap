@@ -1,0 +1,58 @@
+.seccion{
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.seccion1{
+    @extend .seccion;
+    background-color: #111111;
+    color: #F5F5F7;
+    text-align: start;
+}
+
+.seccion1b{
+    @extend .seccion;
+    background-color: #111111;
+    color: #F5F5F7;
+    text-align: end;
+}
+
+.seccion2{
+    @extend .seccion;
+    color:map-get($colores ,"negrotx");
+    text-align: end;
+}
+
+.seccion3{
+    @extend .seccion;
+    color:map-get($colores ,"negrotx");
+    text-align: start;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.seccion4{
+    @extend .seccion;
+    background-color: #050404;
+    color: map-get($colores, "casiBlanco")
+}
+
+.seccion5{
+    @extend .seccion;
+    font-style: italic;
+}
+.seccion6{
+    @extend .seccion;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #F5F5F7;
+    background:linear-gradient(87deg, rgba(32,74,86,1) 30%, rgba(23,40,45,1) 67%, rgba(17,17,17,1) 100%, rgba(46,123,146,1) 100%);
+}
+
+.seccion7{
+    @extend .seccion;
+    margin-top: 220px;
+    margin-bottom: 220px;
+}

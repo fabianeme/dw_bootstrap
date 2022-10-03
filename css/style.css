@@ -10,7 +10,7 @@ body {
   transition: all 0.5s ease; }
 
 .bgscroll {
-  background-color: #111111e0; }
+  background-color: #111111ef; }
 
 .nav-link {
   color: #e6e6e6;
@@ -36,14 +36,6 @@ body {
 main {
   background-color: #ececec; }
 
-.btn-link {
-  color: #ececec;
-  transition: 0.5s; }
-
-.btn-link:hover {
-  color: white;
-  transform: scale(1.05); }
-
 .producto {
   transition: 0.3s;
   max-width: 480px; }
@@ -57,6 +49,14 @@ main {
 
 .icomp {
   height: 80px; }
+
+.btn-link {
+  color: #ececec;
+  transition: 0.5s; }
+
+.btn-link:hover {
+  color: white;
+  transform: scale(1.05); }
 
 .txgradred {
   background: linear-gradient(87deg, #df2d2d 0%, white 34%);
@@ -88,22 +88,17 @@ main {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text; }
 
+.txgraddarkblue {
+  background: linear-gradient(87deg, #111111 25%, #17282d 67%, #204a56 100%, #2e7b92 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; }
+
 .txgradgreen {
   background: linear-gradient(87deg, #f2f2f2 61%, #04675d 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text; }
 
-.btn-dark {
-  background-image: linear-gradient(87deg, #012f2b 0%, #05786c 100%); }
-
-.padding {
-  padding-top: 60px;
-  padding-bottom: 60px; }
-
-.bgdark {
-  background-color: #111111; }
-
-.seccion, .seccion1, .seccion2, .seccion3, .seccion4, .seccion5 {
+.seccion, .seccion1, .seccion1b, .seccion2, .seccion3, .seccion4, .seccion5, .seccion6, .seccion7 {
   align-items: center;
   justify-content: center;
   padding-top: 40px;
@@ -113,6 +108,11 @@ main {
   background-color: #111111;
   color: #F5F5F7;
   text-align: start; }
+
+.seccion1b {
+  background-color: #111111;
+  color: #F5F5F7;
+  text-align: end; }
 
 .seccion2 {
   color: #222222;
@@ -130,6 +130,23 @@ main {
 
 .seccion5 {
   font-style: italic; }
+
+.seccion6 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #F5F5F7;
+  background: linear-gradient(87deg, #204a56 30%, #17282d 67%, #111111 100%, #2e7b92 100%); }
+
+.seccion7 {
+  margin-top: 220px;
+  margin-bottom: 220px; }
+
+.btn-dark {
+  background-image: linear-gradient(87deg, #012f2b 0%, #05786c 100%); }
+
+.padding {
+  padding-top: 60px;
+  padding-bottom: 60px; }
 
 .float {
   position: fixed;
@@ -187,3 +204,20 @@ footer {
   min-height: 15px;
   width: 2px;
   color: white; }
+
+@media (max-width: 991.98px) {
+  body {
+    text-align: center;
+    justify-content: center;
+    align-content: center; }
+    body nav {
+      background-color: #111111; }
+  .bgnav {
+    padding-top: 60px; }
+  .seccion, .seccion1, .seccion1b, .seccion2, .seccion3, .seccion4, .seccion5, .seccion6, .seccion7 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  .padding {
+    padding-top: 10px;
+    padding-bottom: 10px; } }
