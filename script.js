@@ -28,6 +28,7 @@ let productos = [
         nombre: "MOBIL SUPER 20W-50",
         precio: 1200,
         stock: 20,
+        tipo: "aceite lubricante",
         descripcion: "Aceite mineral multiviscoso para automoviles de alto kilometraje.",
         imgUrl: "../images/aceites/aceite1.png",
     },
@@ -36,6 +37,7 @@ let productos = [
         nombre: "MOBIL SUPER 10W-30",
         precio: 1000,
         stock: 33,
+        tipo: "aceite lubricante",
         descripcion: "Aceite multiviscoso para los que buscan mas ahorro y ademas calidad.",
         imgUrl: "../images/aceites/aceite2.png",
     },
@@ -44,6 +46,7 @@ let productos = [
         nombre: "MOBIL SUPER 15W-40 SEMISINTETICO",
         precio: 750,
         stock: 90,
+        tipo: "aceite lubricante",
         descripcion: "Aceite semisintetico multiviscoso para la proteccion del motor.",
         imgUrl: "../images/aceites/aceite3.png",
     },
@@ -51,7 +54,8 @@ let productos = [
         id: 23,
         nombre: "MOBIL SUPER 10W-40 SEMISINTETICO",
         precio: 800,
-        stock: 40,
+        stock: 4,
+        tipo: "aceite lubricante",
         descripcion: "Aceite semisintetico que funciona en condiciones severas.",
         imgUrl: "../images/aceites/aceite4.png",
     },
@@ -61,14 +65,31 @@ let productos = [
 
 let containerProductos = document.getElementById("containerProductos")
 let carrito = document.getElementById("carrito")
+let arrayCarrito = []
 
+let comprar = document.getElementById("comprar")
+comprar.onclick = () => {
+    localStorage.clear()
+    carrito.innerHTML= ""
+}
+
+if (localStorage.getItem("carrito")) {
+    arrayCarrito = JSON.parse(localStorage.getItem("carrito"))
+}
+
+rederizarCarrito()
 renderizarProductos(productos)
 
 function renderizarProductos(arrayProductos) {
     containerProductos.innerHTML= ``
-    for (const producto of productos) {
+    for (const producto of arrayProductos) {
         let tarjetaProducto = document.createElement("div")
-        tarjetaProducto.className = "col-lg-3 col-md-6 col-sm-12 producto"
+        
+        if (producto.stock <5) {
+            tarjetaProducto.className = "col-lg-3 col-md-6 col-sm-12 productoPocoStock"
+        } else {
+            tarjetaProducto.className = "col-lg-3 col-md-6 col-sm-12 producto"
+        }
         
         tarjetaProducto.id = producto.id
     
@@ -81,8 +102,9 @@ function renderizarProductos(arrayProductos) {
                     <div class="col-md-8">
                         <div class="card-body text-start">
                             <h5 class="card-title">${producto.nombre}</h5>
-                            <p class="card-text"><small class="text-muted">Aceite lubricante</small></p>
+                            <p class="card-text"><small class="text-muted">${producto.tipo}</small></p>
                             <p class="card-text">$${producto.precio}</p>
+                            <p class="card-text">${producto.descripcion}</p>
                             <p class="card-text"><small class="text-muted">Quedan ${producto.stock} u.</small></p>
                             <div class="text-end"><button class="btnCarrito" id=${producto.id} >Agregar al carrito</button>
                         </div>
@@ -100,11 +122,49 @@ function renderizarProductos(arrayProductos) {
     }
 }
 
+let input = document.getElementById("input")
+input.addEventListener("input", fnBuscar)
+
+function fnBuscar() {
+    let filterProductos = productos.filter(producto => producto.nombre.includes(input.value))
+    renderizarProductos(filterProductos)
+    console.log(filterProductos)
+}
+
 function agregarCarrito(e) {
+    
    console.dir(e.target)
    let productoCarrito = productos.find(producto => producto.id== e.target.id)
-   carrito.innerHTML += `
-   <h3>${productoCarrito.nombre} $${productoCarrito.precio}</h3>
-   `
+   let productoAgregado = arrayCarrito.findIndex(producto => producto.id== e.target.id)
+   if (productoAgregado != -1) {
+    arrayCarrito[productoAgregado] = {
+        id: arrayCarrito[productoAgregado].id, nombre: arrayCarrito[productoAgregado].nombre, imgUrl: arrayCarrito[productoAgregado].imgUrl, precio: arrayCarrito[productoAgregado].precio, unidades: arrayCarrito[productoAgregado].unidades + 1, subtotal: arrayCarrito[productoAgregado].precio * (arrayCarrito[productoAgregado].unidades +1),
+    }
+   } else {
+    arrayCarrito.push({
+        id: productoCarrito.id, nombre: productoCarrito.nombre,imgUrl: productoCarrito.imgUrl, precio: productoCarrito.precio, unidades: 1, subtotal: productoCarrito.precio ,
+       })
+   }
+
+   let carritoJSON = JSON.stringify(arrayCarrito)
+   localStorage.setItem("carrito", carritoJSON)
+
+   rederizarCarrito()
+}
+
+function rederizarCarrito(){
+    carrito.innerHTML = `<div class="col-md-3"><h3>Producto</h3></div>
+    <div class="col-md-3"><h3>Precio</h3></div>
+    <div class="col-md-3"><h3>Cantidad</h3></div>
+    <div class="col-md-3"><h3>Subtotal</h3></div>`
+    for (const itemCarrito of arrayCarrito) {
+        carrito.innerHTML += `
+        <div class="col-md-3"><h5>${itemCarrito.imgUrl}${itemCarrito.nombre}</h5></div>
+        <div class="col-md-3"><h3>$${itemCarrito.precio}</h3></div>
+        <div class="col-md-3"><h3>${itemCarrito.unidades}</h3></div>
+        <div class="col-md-3"><h3>${itemCarrito.subtotal}</h3></div>
+        ` 
+    }
+    
 }
 
