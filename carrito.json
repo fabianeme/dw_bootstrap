@@ -1,0 +1,38 @@
+[
+    {
+        "id": 8,
+        "nombre": "MOBIL SUPER 20W-50",
+        "precio": 1200,
+        "stock": 20,
+        "tipo": "aceite lubricante",
+        "descripcion": "Aceite mineral multiviscoso para automoviles de alto kilometraje.",
+        "imgUrl": "../images/aceites/aceite1.png"
+    },
+    {
+        "id": 12,
+        "nombre":"MOBIL SUPER 10W-30",
+        "precio": 1000,
+        "stock": 33,
+        "tipo": "aceite lubricante",
+        "descripcion": "Aceite multiviscoso para los que buscan mas ahorro y ademas calidad.",
+        "imgUrl": "../images/aceites/aceite2.png"
+    },
+    {
+        "id": 55,
+        "nombre": "MOBIL SUPER 15W-40 SEMISINTETICO",
+        "precio": 750,
+        "stock": 90,
+        "tipo": "aceite lubricante",
+        "descripcion": "Aceite semisintetico multiviscoso para la proteccion del motor.",
+        "imgUrl": "../images/aceites/aceite3.png"
+    },
+    {
+        "id": 23,
+        "nombre": "MOBIL SUPER 10W-40 SEMISINTETICO",
+        "precio": 800,
+        "stock": 4,
+        "tipo": "aceite lubricante",
+        "descripcion" : "Aceite semisintetico que funciona en condiciones severas.",
+        "imgUrl": "./images/aceites/aceite4.png"
+    }
+]

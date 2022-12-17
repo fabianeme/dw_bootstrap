@@ -1,0 +1,77 @@
+[
+    {
+        "id": 1,
+        "nombre": "MOBIL SUPER 20W-50",
+        "precio": 1200,
+        "stock": 20,
+        "tipo": "aceite lubricante",
+        "descripcion": "Aceite mineral multiviscoso para automoviles de alto kilometraje.",
+        "imgUrl": "../images/aceites/aceite1.png"
+    },
+    {
+        "id": 2,
+        "nombre":"MOBIL SUPER 10W-30",
+        "precio": 1000,
+        "stock": 33,
+        "tipo": "aceite lubricante",
+        "descripcion": "Aceite multiviscoso para los que buscan mas ahorro y ademas calidad.",
+        "imgUrl": "../images/aceites/aceite2.png"
+    },
+    {
+        "id": 3,
+        "nombre": "MOBIL SUPER 15W-40",
+        "precio": 750,
+        "stock": 90,
+        "tipo": "aceite lubricante semisintetico ",
+        "descripcion": "Aceite semisintetico multiviscoso para la proteccion del motor.",
+        "imgUrl": "../images/aceites/aceite3.png"
+    },
+    {
+        "id": 4,
+        "nombre": "MOBIL SUPER 10W-40",
+        "precio": 800,
+        "stock": 4,
+        "tipo": "aceite lubricante sintetico %100",
+        "descripcion" : "Aceite semisintetico que funciona en condiciones severas.",
+        "imgUrl": "../images/aceites/aceite4.png"
+    },
+    {
+        "id": 5,
+        "nombre": "Motul 660",
+        "precio": 1500,
+        "stock": 4,
+        "tipo": "liq. freno",
+        "descripcion" : "Para todo sistema hidráulico de freno y embrague donde un fluido sintético sin silicona este recomendado.",
+        "imgUrl": "../images/aceites/liqdefreno.png"
+    }
+    ,
+    {
+        "id": 6,
+        "nombre": "DOT 5.1",
+        "precio": 1700,
+        "stock": 9,
+        "tipo": "liq. freno",
+        "descripcion" : "Para todos los sistemas hidráulicos de frenos y de embragues que respondan o recomienden las especificaciones. ",
+        "imgUrl": "../images/aceites/liqdefreno2.png"
+    }
+    ,
+    {
+        "id": 7,
+        "nombre": "Refrigerante Fluor",
+        "precio": 550,
+        "stock": 40,
+        "tipo": "Refrigerante",
+        "descripcion" : "Contiene inhibidores que ofrecen protección el sobrecalentamiento, el óxido y la corrosión cuando se usan según las recomendaciones ",
+        "imgUrl": "../images/refrigerantes/refrigeranteFluor.png"
+    }
+    ,
+    {
+        "id": 8,
+        "nombre": "Refrigerante Rosa",
+        "precio": 600,
+        "stock": 34,
+        "tipo": "Refrigerante",
+        "descripcion" : "Contiene inhibidores híbridos. Para sistemas de refrigeración de vehículos de turismo y vehículos industriales ligeros",
+        "imgUrl": "../images/refrigerantes/refrigeranteRosa.png"
+    }
+]
